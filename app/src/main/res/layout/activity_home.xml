@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_cream"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Welcome"
+        android:fontFamily="@font/lora_bold"
+        android:padding="15dp"
+        android:textSize="25dp" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout"
+        >
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header_nav"
+            app:menu="@menu/nav_menu"
+            android:background="@color/coffee_milk_brown"
+            app:itemVerticalPadding="20dp"
+            app:itemHorizontalPadding="10dp"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

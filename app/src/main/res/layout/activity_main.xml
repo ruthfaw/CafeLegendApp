@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/coffee_milk_brown">
+
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/usernameET"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logoIV"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="Username"
+        android:paddingLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/usernameET"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/passwordET"
+        android:background="@drawable/rounded_button"
+        app:backgroundTint="@null"
+        android:hint="LOGIN"
+        android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/errorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/loginBtn"
+        android:text="error"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>
