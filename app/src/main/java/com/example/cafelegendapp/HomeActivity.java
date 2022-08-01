@@ -65,7 +65,7 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_items:
-                        redirectActivity(this, MenuActivity.class);
+//                        redirectActivity(this, MenuActivity.class);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

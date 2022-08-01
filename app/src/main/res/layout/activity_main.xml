@@ -48,7 +48,7 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/passwordET"
         android:background="@drawable/rounded_button"
-        app:backgroundTint="@null"
+        android:backgroundTint="@drawable/mouse_down_interaction"
         android:hint="LOGIN"
         android:textColorHint="@color/white"
         />
