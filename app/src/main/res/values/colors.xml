@@ -15,4 +15,6 @@
 
     <color name="TitleActionBar">#333333</color>
     <color name="ColorPVariant">#9b806e</color>
+    <color name="indicator0">#50000000</color>
+    <color name="indicator1">#FFFFFFFF</color>
 </resources>

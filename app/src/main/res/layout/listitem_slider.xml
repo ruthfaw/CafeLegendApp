@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:scaleType="fitXY"
         android:id="@+id/ivSliderImage"
+        android:src="@drawable/slider_1"
         android:layout_height="match_parent"/>
 
 </RelativeLayout>

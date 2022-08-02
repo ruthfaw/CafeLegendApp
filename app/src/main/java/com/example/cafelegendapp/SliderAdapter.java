@@ -17,10 +17,12 @@ import java.util.List;
 public class SliderAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context c;
     private List<Integer> list;
+    private ViewPager2 viewPager2;
 
-    public SliderAdapter(Context c, List<Integer> list) {
+    public SliderAdapter(Context c, List<Integer> list, ViewPager2 viewPager2) {
         this.c = c;
         this.list = list;
+        this.viewPager2 = viewPager2;
     }
 
     @NonNull
@@ -32,9 +34,9 @@ public class SliderAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ((ViewHolder)holder).bindData(list.get(position));
-//        if(position == list.size()-2){
-//           ViewPager2.post
-//        }
+        if(position == list.size()-2){
+           viewPager2.post(runnable);
+        }
     }
 
     @Override
@@ -59,11 +61,12 @@ public class SliderAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
-//    private Runnable runnable = new Runnable() {
-//        @Override
-//        public void run() {
-//            list.addAll(list);
-//        }
-//    }
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            list.addAll(list);
+            notifyDataSetChanged();
+        }
+    };
 
 }

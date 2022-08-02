@@ -32,6 +32,7 @@
                 android:background="@drawable/gradient_bg"/>
         </FrameLayout>
 
+
         <ImageView
             android:layout_width="@dimen/button_size"
             android:id="@+id/ivPreviousLeft"
@@ -59,10 +60,22 @@
             android:layout_height="wrap_content"
             android:text="Welcome"
             android:fontFamily="@font/lora_bold"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="175dp"
             android:padding="15dp"
+            android:gravity="center"
             android:textSize="40dp"
             android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:id="@+id/dotsLayout"
+            android:layout_marginTop="645dp"
+            android:layout_marginBottom="4dp"
+            />
+
 
     </RelativeLayout>
 
