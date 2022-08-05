@@ -71,8 +71,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.foodnameTV.setText(mData.get(position).getFoodName());
-        holder.foodratingTV.setText(mData.get(position).getFoodRating());
-        holder.foodsoldTV.setText(mData.get(position).getFoodSold());
+        holder.foodratingTV.setText("Rating : " + mData.get(position).getFoodRating());
+        holder.foodsoldTV.setText("Sold Amount : " + mData.get(position).getFoodSold());
         holder.foodpriceTV.setText(mData.get(position).getFoodPrice());
         holder.foodimageIV.setImageResource(mData.get(position).getFoodImage());
     }

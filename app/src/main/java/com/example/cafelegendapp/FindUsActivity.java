@@ -40,6 +40,7 @@ public class FindUsActivity extends AppCompatActivity implements NavigationView.
         drawerLayout = findViewById(R.id.drawer_layout);
         navView = findViewById(R.id.navigation);
         toolbar = findViewById(R.id.toolbar);
+        getSupportActionBar().setTitle("Find Us");
 
         extras = getIntent().getExtras();
     }

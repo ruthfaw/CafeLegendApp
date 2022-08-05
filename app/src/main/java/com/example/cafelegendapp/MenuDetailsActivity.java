@@ -2,6 +2,7 @@ package com.example.cafelegendapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +21,8 @@ public class MenuDetailsActivity extends AppCompatActivity {
     Button buyBtn;
     Bundle extras;
 
+    Toolbar toolbar;
+
     void init(){
         foodImage = findViewById(R.id.image_details);
         foodName = findViewById(R.id.name_details);
@@ -28,6 +31,12 @@ public class MenuDetailsActivity extends AppCompatActivity {
         buyBtn = findViewById(R.id.buyBtn);
 
         extras = getIntent().getExtras();
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Menu Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         foodImage.setImageResource(extras.getInt("image_detail"));
         foodName.setText(extras.getString("name_detail"));
         foodPrice.setText(extras.getString("price_detail"));
@@ -53,11 +62,16 @@ public class MenuDetailsActivity extends AppCompatActivity {
 
     void quantityValidation(){
         buyBtn.setOnClickListener(x-> {
+
+            int quantityVar = 0;
             EditText quantity = findViewById(R.id.quantity);
             String quantityString = quantity.getText().toString();
-            int quantityVar = Integer.parseInt(quantityString);
 
-            if (quantityVar <= 0) {
+            if(!quantityString.matches("")){
+                quantityVar = Integer.parseInt(quantityString);
+            }
+
+            if (quantityVar == 0) {
                 showDialog("Quantity must be greater than 0!");
             } else {
                 Toast.makeText(this, "Success Buying", Toast.LENGTH_SHORT).show();

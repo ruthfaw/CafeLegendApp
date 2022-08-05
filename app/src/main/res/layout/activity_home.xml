@@ -81,11 +81,14 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
         android:background="@color/coffee_milk_brown"
         app:headerLayout="@layout/header_nav"
         app:menu="@menu/nav_menu"
+        app:itemHorizontalPadding="35dp"
+        app:itemVerticalPadding="17dp"
+        app:itemTextAppearance="@style/TextViewStyle"
         android:layout_gravity="start"
         />
 

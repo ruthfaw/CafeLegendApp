@@ -23,6 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/logoIV"
         android:background="@drawable/rounded_edit_text"
+        android:fontFamily="@font/lora_bold"
         android:hint="Username"
         android:paddingLeft="15dp"
         />
@@ -35,6 +36,7 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/usernameET"
         android:background="@drawable/rounded_edit_text"
+        android:fontFamily="@font/lora_bold"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
@@ -47,6 +49,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/passwordET"
+        android:fontFamily="@font/lora_bold"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@drawable/mouse_down_interaction"
         android:hint="LOGIN"

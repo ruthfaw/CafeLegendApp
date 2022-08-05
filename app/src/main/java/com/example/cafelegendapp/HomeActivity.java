@@ -54,7 +54,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     void init() {
         drawerLayout = findViewById(R.id.drawer_layout);
         navView = findViewById(R.id.navigation);
+
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Menu");
+
         welcomeMessageTV = findViewById(R.id.welcome_message);
         viewPager2 = findViewById(R.id.vpSlider);
     }
