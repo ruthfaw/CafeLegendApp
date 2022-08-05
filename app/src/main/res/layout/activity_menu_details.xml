@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuDetailsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image_details"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/image_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_menu_details"
+        >
+
+        <TextView
+            android:id="@+id/name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:text="Food Name"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:padding="15dp"/>
+
+        <TextView
+            android:id="@+id/price_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_regular"
+            android:text="Food Price"
+            android:textSize="20dp"
+            android:layout_below="@+id/name_details"
+            android:paddingLeft="15dp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/desc_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_regular"
+            android:text="Description"
+            android:textSize="20dp"
+            android:layout_below="@+id/price_details"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp"
+            />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_quantity_input"
+            android:layout_below="@+id/desc_details"
+            android:layout_centerHorizontal="true"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/lora_regular"
+            />
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:text="Buy"
+            android:textSize="20dp"
+            android:fontFamily="@font/lora_bold"
+            android:layout_below="@id/quantity"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

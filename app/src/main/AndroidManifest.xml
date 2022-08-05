@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeLegendApp">
-        <activity android:name=".FindUsActivity"></activity>
-        <activity android:name=".MenuDetailsActivity" />
+        <activity android:name=".MenuDetailsActivity"></activity>
+        <activity android:name=".FindUsActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
