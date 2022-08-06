@@ -67,7 +67,7 @@
         android:layout_height="match_parent"
         android:background="@color/coffee_milk_brown"
         app:headerLayout="@layout/header_nav"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/nav_menu3"
         app:itemHorizontalPadding="35dp"
         app:itemVerticalPadding="17dp"
         app:itemTextAppearance="@style/TextViewStyle"

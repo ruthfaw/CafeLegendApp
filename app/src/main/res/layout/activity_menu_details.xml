@@ -8,7 +8,7 @@
     tools:context=".MenuDetailsActivity">
 
     <include
-        layout="@layout/toolbar" />
+        layout="@layout/toolbar2" />
 
     <ImageView
         android:layout_below="@+id/toolbar"
