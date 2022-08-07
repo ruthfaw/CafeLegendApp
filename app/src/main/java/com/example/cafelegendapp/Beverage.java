@@ -48,7 +48,9 @@ public class Beverage extends Fragment {
         listFood.add(new Foodlist("Pineapple Cherry Juice", "4.1", "18 sold", "Rp. 17.000", R.drawable.bvg_5, "Sweet and Sour Taste"));
         listFood.add(new Foodlist("Salted Caramel Milkshake", "4.8", "57 sold", "Rp. 38.000", R.drawable.bvg_6, "Enjoyable Anytime Anywhere"));
         listFood.add(new Foodlist("Strawberry Cheesecake Milkshake", "4.8", "58 sold", "Rp. 42.000", R.drawable.bvg_7, "Sweet, Sour, and Cheesy Taste"));
-
+        listFood.add(new Foodlist("Grasshopper Pie Milkshakes", "4.2", "27 sold", "Rp. 35.000", R.drawable.bvg_8,"Delightful Drink with Minty Taste"));
+        listFood.add(new Foodlist("Mixed Berry & Banana Smoothie", "4.7", "45 sold", "Rp. 40.000", R.drawable.bvg_9,"Healty and Nutritious Drink"));
+        listFood.add(new Foodlist("Berry Lemon Squash", "4.8", "39 sold", "Rp. 22.000", R.drawable.bvg_10,"Sour and Refreshing Taste"));
     }
 
 }

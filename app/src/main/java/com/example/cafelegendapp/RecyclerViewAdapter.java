@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     Context mContext;
     List<Foodlist> mData;
+    Bundle extras;
 
     public RecyclerViewAdapter(Context mContext, List<Foodlist> mData) {
         this.mContext = mContext;
@@ -39,21 +41,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         vHolder.foodlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                TextView foodName = (TextView) myDialog.findViewById(R.id.name_details);
-//                TextView foodRating = (TextView) myDialog.findViewById(R.id.rating_details);
-//                TextView foodSold = (TextView) myDialog.findViewById(R.id.sold_details);
-//                TextView foodStock = (TextView) myDialog.findViewById(R.id.stock_details);
-//                TextView foodDesc = (TextView) myDialog.findViewById(R.id.desc_details);
-//                ImageView foodImage = (ImageView) myDialog.findViewById(R.id.image_details);
-//
-//                foodName.setText(mData.get(vHolder.getAdapterPosition()).getFoodName());
-//                foodRating.setText(mData.get(vHolder.getAdapterPosition()).getFoodRating());
-//                foodSold.setText(mData.get(vHolder.getAdapterPosition()).getFoodSold());
-//                foodStock.setText(mData.get(vHolder.getAdapterPosition()).getFoodStock());
-//                foodDesc.setText(mData.get(vHolder.getAdapterPosition()).getFoodDesc());
-//                foodImage.setImageResource(mData.get(vHolder.getAdapterPosition()).getFoodImage());
-
-//                myDialog.show();
 
                 Foodlist foodlist = mData.get(vHolder.getAdapterPosition());
                 Intent intent = new Intent(mContext, MenuDetailsActivity.class);
@@ -61,6 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("name_detail", foodlist.getFoodName());
                 intent.putExtra("price_detail", foodlist.getFoodPrice());
                 intent.putExtra("desc_detail", foodlist.getFoodDesc());
+//                intent.putExtra("username", extras.getString("username").toString());
                 mContext.startActivity(intent);
             }
         });

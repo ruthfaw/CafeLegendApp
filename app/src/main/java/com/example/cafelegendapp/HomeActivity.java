@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import me.relex.circleindicator.CircleIndicator3;
+
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
@@ -48,16 +50,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     Handler sliderhandler = new Handler();
     ViewPager2 viewPager2;
 
-    //TextView[] dots;
-    //int realSliderPosition;
-
     void init() {
         drawerLayout = findViewById(R.id.drawer_layout);
         navView = findViewById(R.id.navigation);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Menu");
+        getSupportActionBar().setTitle("Home");
 
         welcomeMessageTV = findViewById(R.id.welcome_message);
         viewPager2 = findViewById(R.id.vpSlider);
@@ -74,12 +73,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     void changeText() {
         extras = getIntent().getExtras();
-        welcomeMessageTV.setText("Welcome, " + extras.getString("username").toString());
+        welcomeMessageTV.setText("Welcome " + extras.getString("username").toString());
     }
 
     private void initSlider() {
         adapter = new SliderAdapter(this, getImages(), viewPager2);
         binding.vpSlider.setAdapter(adapter);
+
+        CircleIndicator3 indicator = findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager2);
 
         initButtons();
         binding.vpSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -91,9 +93,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 sliderhandler.postDelayed(sliderRunnable, 5000);
             }
         });
-
-//        List<Integer> list = getImages();
-//        dots = new TextView[list.size()];
     }
 
     private Runnable sliderRunnable = new Runnable() {
@@ -102,28 +101,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
         }
     };
-
-//    private void transitionDots(){
-//        for(int i=0;i< dots.length;i++){
-//            if(i==realSliderPosition){
-//                dots[i].setBackgroundResource(R.drawable.indicator1);
-//            }else{
-//                dots[i].setBackgroundResource(R.drawable.inidicator0);
-//            }
-//        }
-//    }
-
-//    private void initDotsLayout(){
-//        binding.dotsLayout.removeAllViews();
-//        for (int i=0;i<dots.length;i++){
-//            dots[i] = new TextView(this);
-//            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20, 20);
-//            params.setMargins(4, 4, 4, 4);
-//            dots[i].setLayoutParams(params);
-//            dots[i].setBackgroundResource(R.drawable.inidicator0);
-//            binding.dotsLayout.addView(dots[i]);
-//        }
-//    }
 
     private void initButtons() {
         currentImage = 0;

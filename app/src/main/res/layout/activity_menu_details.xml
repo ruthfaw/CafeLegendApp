@@ -18,7 +18,7 @@
         android:layout_height="450dp"/>
 
     <RelativeLayout
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="350dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rounded_menu_details"
@@ -31,7 +31,7 @@
             android:fontFamily="@font/lora_bold"
             android:text="Food Name"
             android:textSize="30dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="17dp"
             android:padding="20dp"/>
 
         <TextView
@@ -70,17 +70,19 @@
             android:fontFamily="@font/lora_regular"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buyBtn"
             android:layout_width="175dp"
             android:layout_height="55dp"
             android:text="Buy"
             android:textSize="20dp"
+            android:textColor="@color/light_cream"
             android:fontFamily="@font/lora_bold"
             android:layout_below="@id/quantity"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button"
+            android:backgroundTint="@drawable/mouse_down_interaction"
             />
 
     </RelativeLayout>

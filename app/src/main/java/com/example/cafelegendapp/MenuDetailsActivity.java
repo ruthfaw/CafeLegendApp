@@ -76,6 +76,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Success Buying", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MenuActivity.class);
+//                intent.putExtra("username", extras.getString("username").toString());
                 startActivity(intent);
                 finish();
             }

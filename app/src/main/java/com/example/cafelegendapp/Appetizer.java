@@ -49,6 +49,9 @@ public class Appetizer extends Fragment {
         listFood.add(new Foodlist("Corn Dog", "4.7", "12 sold", "Rp. 27.000", R.drawable.appetz_5, "Crispy and Hot"));
         listFood.add(new Foodlist("Mozarella Sticks", "4.5", "24 sold", "Rp. 30.000", R.drawable.appetz_6,"Delicious with Strong Chesse Taste"));
         listFood.add(new Foodlist("Crab Rangoon", "4.2", "29 sold", "Rp. 23.000", R.drawable.appetz_7,"Crispy and Savory"));
+        listFood.add(new Foodlist("Croquette", "4.3", "35 sold", "Rp. 28.000", R.drawable.appetz_8,"Crispy Outside Soft Inside"));
+        listFood.add(new Foodlist("Hasseltots", "4.5", "37 sold", "Rp. 36.000", R.drawable.appetz_9,"Fanciest Dessert in French"));
+        listFood.add(new Foodlist("Berry Cream Cornets", "4.8", "38 sold", "Rp. 55.000", R.drawable.appetz_10,"Sweet and Creamy"));
 
     }
 

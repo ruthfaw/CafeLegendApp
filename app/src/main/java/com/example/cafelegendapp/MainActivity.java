@@ -53,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
                 showDialog("Registration Failed!");
                 errorTV.setText("Fields cannot be empty");
                 errorTV.setVisibility(View.VISIBLE);
-            }else if((username.length() < 3 || username.length() > 15)){
+            }else if((username.length() < 5 || username.length() > 20)){
                 showDialog("Registration Failed!");
-                errorTV.setText("Username's length must be between 3 and 15");
+                errorTV.setText("Username's length must be between 5 and 20");
                 errorTV.setVisibility(View.VISIBLE);
             }else if(!isAlphaNumeric(password)){
                 showDialog("Registration Failed!");
-                errorTV.setText("Password must be alpha-numeric");
+                errorTV.setText("Password must contain both letter and number (alphanumeric)");
                 errorTV.setVisibility(View.VISIBLE);
             }else{
                 Toast.makeText(this, "Success Login", Toast.LENGTH_SHORT).show();
@@ -72,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static boolean isAlphaNumeric(String text){
-        return text.matches("^[a-zA-Z0-9]+$");
+        //contain number or letter
+//        return text.matches("^[a-zA-Z0-9]+$");
+
+        //must contain both number and letter, at least 1 number and 1 letter
+        return text.matches("^(?=[a-zA-Z0-9]*[a-zA-Z])(?=[a-zA-Z0-9]*\\d)[a-zA-Z0-9]*$");
     }
 
     @Override

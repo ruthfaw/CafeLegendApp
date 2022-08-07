@@ -30,6 +30,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     void init(){
         drawerLayout = findViewById(R.id.drawer_layout);
         navView = findViewById(R.id.navigation);
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Menu");
