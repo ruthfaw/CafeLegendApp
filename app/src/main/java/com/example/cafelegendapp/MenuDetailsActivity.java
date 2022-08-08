@@ -1,12 +1,15 @@
 package com.example.cafelegendapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,13 +19,14 @@ import android.widget.Toast;
 
 public class MenuDetailsActivity extends AppCompatActivity {
 
-    ImageView foodImage;
+    ImageView foodImage, backBtn;
     TextView foodName, foodPrice, foodDesc;
     Button buyBtn;
     Bundle extras;
 
     Toolbar toolbar;
 
+    @SuppressLint("WrongViewCast")
     void init(){
         foodImage = findViewById(R.id.image_details);
         foodName = findViewById(R.id.name_details);
@@ -32,16 +36,24 @@ public class MenuDetailsActivity extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Menu Details");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar = findViewById(R.id.toolbar2);
+        backBtn = findViewById(R.id.back_button);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         foodImage.setImageResource(extras.getInt("image_detail"));
         foodName.setText(extras.getString("name_detail"));
         foodPrice.setText(extras.getString("price_detail"));
         foodDesc.setText(extras.getString("desc_detail"));
     }
+
+
+
 
     public void showDialog(String msg){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

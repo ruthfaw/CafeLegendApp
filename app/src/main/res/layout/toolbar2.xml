@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar"
+    android:id="@+id/toolbar2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/mocha_brown"
-    app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
-    android:elevation="4dp"
-    app:titleTextAppearance="@style/TitleTextViewStyle">
+    android:elevation="4dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_button"
+        android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:text="Menu Details"
+        android:fontFamily="@font/lora_bold"
+        android:textSize="25dp"
+        android:textColor="@color/black"/>
 
 </androidx.appcompat.widget.Toolbar>
